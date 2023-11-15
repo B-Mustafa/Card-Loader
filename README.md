@@ -9,7 +9,7 @@ The Skeleton Card Loader is a simple and elegant loading card made with HTML and
 
 ## Preview
 
-[![Skeleton Card Loader]()]
+[![Skeleton Card Loader](Screenshot 2023-11-15 121753.png)]
 
 ## Usage
 

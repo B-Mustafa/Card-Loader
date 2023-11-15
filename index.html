@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This is made by Mustafa | https://mustafadev.me -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card loader | Mustafa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #111;
+    }
+
+    .card {
+        max-width: 350px;
+        width: 100%;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid #d9d9d9;
+    }
+
+    .card .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .header .img {
+        height: 75px;
+        width: 75px;
+        background: #d9d9d9;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .header .details {
+        margin-left: 20px;
+    }
+
+    .details span {
+        display: block;
+        background: #d9d9d9;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .details .name {
+        height: 15px;
+        width: 100px;
+    }
+
+    .details .about {
+        height: 13px;
+        width: 150px;
+        margin-top: 10px;
+    }
+
+    .card .description {
+        margin: 25px 0;
+    }
+
+    .description .line {
+        background: #d9d9d9;
+        border-radius: 10px;
+        height: 13px;
+        margin: 10px 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .description .line-1 {
+        width: calc(100% - 15%);
+    }
+
+    .description .line-3 {
+        width: calc(100% - 40%);
+    }
+
+    .card .btns {
+        display: flex;
+    }
+
+    .card .btns .btn {
+        height: 45px;
+        width: 100%;
+        background: #d9d9d9;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btns .btn-1 {
+        margin-right: 8px;
+    }
+
+    .btns .btn-2 {
+        margin-left: 8px;
+    }
+
+    .header .img::before,
+    .details span::before,
+    .description .line::before,
+    .btns .btn::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(to right, #d9d9d9 0%, rgba(0, 0, 0, 0.05) 30%, #d9d9d9 40%, #d9d9d9 100%);
+        background-repeat: no-repeat;
+        background-size: 450px 400px;
+        animation: shine 1s linear infinite;
+    }
+
+    .header .img::before {
+        background-size: 650px 600px;
+    }
+
+    .details span::before {
+        animation-delay: 0.2s;
+    }
+
+    .btns .btn-2::before {
+        animation-delay: 0.22s;
+    }
+
+    @keyframes shine {
+        0% {
+            background-position: -400px 0;
+        }
+
+        100% {
+            background-position: 400px 0;
+        }
+    }
+    .footer{
+        margin-top: 20px;
+        color: #fff;
+    }
+    .footer a{
+        color: #fff;
+        text-decoration: none;
+    }
+    .footer a:hover{
+        color: #999;
+    }
+</style>
+
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="img"></div>
+            <div class="details">
+                <span class="name"></span>
+                <span class="about"></span>
+            </div>
+        </div>
+        <div class="description">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
+        <div class="btns">
+            <div class="btn btn-1"></div>
+            <div class="btn btn-2"></div>
+        </div>
+    </div>
+    <footer class="footer">
+        &copy; Made By Mustafa | <a href="https://github.com/B-Mustafa">Github: B-Mustafa</a>
+    </footer>
+</body>
+
+</html>
